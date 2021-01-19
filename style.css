@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "SEGA";
+  src: url("../font/MR ROBOT.ttf");
+}
+
+.main-title {
+  text-align: center;
+  font-family: "SEGA" !important;
+  font-weight: normal;
+  color: red;
+  font-size: 40px;
+}
+
+#sqr-0,
+#sqr-1,
+#sqr-2 {
+  border-top: none;
+}
+#sqr-0,
+#sqr-3,
+#sqr-6 {
+  border-left: none;
+}
+#sqr-6,
+#sqr-7,
+#sqr-8 {
+  border-bottom: none;
+}
+#sqr-2,
+#sqr-5,
+#sqr-8 {
+  border-right: none;
+}
+
+.board-section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.block {
+  padding: 35px;
+  background-color: Transparent;
+  outline: none;
+  border: 1px solid black;
+  color: red;
+  text-align: center;
+  font-size: 30px;
+}
+
+.block:hover {
+  background-color: rgb(250, 234, 234);
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+  color: red;
+}
+
+.player1Win {
+  color: green;
+}
+.player2Win {
+  color: blue;
+}
+
+.computerWin,
+.opp-title {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
+.opponent-section {
+  text-align: center;
+}
+.opponent-section > button {
+  display: inline;
+  margin-bottom: 1%;
+}
+
+#comp-btn {
+  margin-left: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .board-section {
+    margin-left: 13%;
+  }
+}

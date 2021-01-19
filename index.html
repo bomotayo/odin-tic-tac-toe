@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-title">Tic-Tac-Toe</h1>
+      <div class="opponent-section">
+        <h2 class="opp-title">Choose an opponent</h2>
+        <button id="pl2-btn">HUMAN</button>
+        <button id="comp-btn">COMPUTER</button>
+        <h2 id="winner"></h2>
+      </div>
+      <div class="board-section">
+        <div id="sqr-0" class="block"></div>
+        <div id="sqr-1" class="block"></div>
+        <div id="sqr-2" class="block"></div>
+        <div id="sqr-3" class="block"></div>
+        <div id="sqr-4" class="block"></div>
+        <div id="sqr-5" class="block"></div>
+        <div id="sqr-6" class="block"></div>
+        <div id="sqr-7" class="block"></div>
+        <div id="sqr-8" class="block"></div>
+      </div>
+      <button onclick="resetBoard()">RESET BOARD</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,3 +1,11 @@
+//Steps
+//empty board array
+//Render board section & assign each block to array element with onclick player move
+//create player move func -> checks for if event clicked is empty and then assigns player move
+// create comp move func -> math random * 9 to select a spot, check if spot is empty then assigns comp move
+// check if gameboard is full with flag & complete func => fun has a local flag is true init but then turns false if there is an empty spot in the board and then assigns the global flag to its !value
+//gameloop func => includes render func, complete func & check winner func. It is called after every move
+
 const boardSection = document.querySelector(".board-section");
 const winner = document.getElementById("winner");
 const compBtn = document.getElementById("comp-btn");
@@ -44,19 +52,23 @@ const checkLine = (a, b, c) => {
 };
 
 const checkMatch = () => {
+  //rows
   for (let i = 0; i < 9; i += 3) {
     if (checkLine(i, i + 1, i + 2)) {
       return gameBoard[i];
     }
   }
+  //columns
   for (let i = 0; i < 3; i++) {
     if (checkLine(i, i + 3, i + 6)) {
       return gameBoard[i];
     }
   }
+  //right diag
   if (checkLine(0, 4, 8)) {
     return gameBoard[0];
   }
+  //left diag
   if (checkLine(2, 4, 6)) {
     return gameBoard[2];
   }
